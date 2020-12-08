@@ -1,0 +1,19 @@
+{
+            "products": [
+        {
+          "id": 1245,
+          "name": "Lays",
+          "price": 45
+        },
+        {
+          "id": 4569,
+          "name": "Parle",
+          "price": 36
+        },
+        {
+          "id": 7852,
+          "name": "Kurkure",
+          "price": 78
+        }
+      ] 
+}

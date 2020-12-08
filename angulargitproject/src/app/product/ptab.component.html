@@ -1,0 +1,19 @@
+<div>
+    <table border="2px">
+        <tr><th>Product Id</th><th>Product Name</th><th>Product Price</th></tr>
+        <tr *ngFor="let p of parr">
+            <td>{{p.pid}}</td>
+            <td>{{p.pname}}</td>
+            <td>{{p.price}}</td>
+            <td><a (click)="deleteProduct(p)">Delete</a>/
+                <a (click)="updateProduct(p)">Edit</a></td>
+        </tr>
+    </table> 
+    <button type="button" name="btn" (click)="displayForm()">Add Product</button>
+    {{flag}}
+    <div *ngIf="flag">
+        <pform [upprod]="pob" (myevent)="flag=$event"></pform> <!--it will be visible after clicking on button-->
+    </div><!--the flag value get replaced by $event=false which is pass from pform-->
+    <!--myevent is for addproduct and as the value is false the form will not be visible-->
+    <!--pob has the product object which is to be updated so it is given to property upprod-->
+</div>
